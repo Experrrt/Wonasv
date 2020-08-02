@@ -11,7 +11,6 @@ public class Player {
     static boolean mapaDalsia =false;
     static int mapaka=0;
     private static boolean horizontalCollision =true;
-    private static boolean verticaCollision =true;
     private static int spawnX=800,spawY=625,x=spawnX,y=spawY,velX,velY, gravity=1,W=30,H=55;
     public void velX(int velX){this.velX=velX;}
     public void velY(int velY){this.velY=velY;}
@@ -30,9 +29,6 @@ public class Player {
         if(y>=(820)){x=map.getSpawn().get(0);y=map.getSpawn().get(1);}
         if(x<=0)x=0;
         if(x>=(1562))x=(1562);
-        if(x==810&&y==625){
-            System.out.println("kokot");
-        }
         endCollision();
 
     }
@@ -74,12 +70,11 @@ public class Player {
     }
     protected boolean hasVerticalCollision(){
         for (int i=0;i<map.getSizeRect();i++){
-        if(map.getBounds(x,y,W,H).intersects(map.getRight(i))&&velX<=0){velX=0;verticaCollision =true;return true;}
+        if(map.getBounds(x,y,W,H).intersects(map.getRight(i))&&velX<=0){velX=0;return true;}
         }
         for (int i=0;i<map.getSizeRect();i++){
-        if(map.getBounds(x,y,W,H).intersects(map.getLeft(i))&&velX>=0){velX=0;verticaCollision =true;return true;}
+        if(map.getBounds(x,y,W,H).intersects(map.getLeft(i))&&velX>=0){velX=0;return true;}
         }
-        verticaCollision =false;
         return false;
     }
     protected boolean spikeCollision(){
