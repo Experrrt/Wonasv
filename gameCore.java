@@ -5,7 +5,7 @@ import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 
 public class gameCore extends Canvas implements Runnable {
-
+///////////////////////////////////////////////////////////////
     /**
      *
      */
