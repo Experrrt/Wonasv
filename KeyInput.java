@@ -9,8 +9,8 @@ public class KeyInput extends KeyAdapter{
     public KeyInput(){
         for (int i=0;i<4;i++){keyDown[i]=false;}
     }
-    public void keyTyped(KeyEvent e){
-        int key = e.getKeyCode();
+
+    public void keyTyped(KeyEvent e) {
     }
     public void keyPressed(KeyEvent e){
         int key = e.getKeyCode();

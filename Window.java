@@ -2,7 +2,12 @@
 import javax.swing.*;
 
 public class Window extends JFrame {
-    public Window(int width,int height,int scale,gameCore game){
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
+    public Window(int width, int height, int scale, gameCore game) {
         setTitle("SanoW");
         setSize(width*scale,height*scale);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

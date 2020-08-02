@@ -103,10 +103,8 @@ public class Player {
     }
     public void render(Graphics g) {
         Graphics2D g2d = (Graphics2D)g;
-        g2d.setColor(Color.RED);
-        g2d.setColor(Color.BLUE);
         g2d.drawRect(map.getEnd().get(0),map.getEnd().get(1),20,20);
-        for (int i=0;i<5;i++){g2d.draw(map.getTop(i));g2d.draw(map.getBottom(i));g2d.draw(map.getLeft(i));g2d.draw(map.getRight(i));}
+        //for (int i=0;i<5;i++){g2d.draw(map.getTop(i));g2d.draw(map.getBottom(i));g2d.draw(map.getLeft(i));g2d.draw(map.getRight(i));}
     }
 
 }
